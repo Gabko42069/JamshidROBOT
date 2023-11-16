@@ -31,9 +31,9 @@ void sixBAll()
     changeMode(leftWing);
     pros::delay(400);
     changeMode(leftWing);
-    pros::delay(600);
-    chassis.turnTo(70, -15, 1000, false, true);
-    chassis.moveTo(70,-26,180,3000,false,false);
+    pros::delay(400);
+    chassis.turnTo(65, -26, 1000, false, true);
+    chassis.moveTo(65,-26,180,3000,false,false);
     pros::delay(1000);
    // chassis.follow(clone7_txt, 1500,10,true,false);
     /*chassis.turnTo(59,-40,1000,false,true);
