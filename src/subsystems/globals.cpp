@@ -49,7 +49,7 @@ lemlib::ChassisController_t lateralController = {
     100, // smallErrorTimeout
     3, // largeErrorRange
     500, // largeErßrorTimeout
-    5 };// slew rate
+    10 };// slew rate
 lemlib::ChassisController_t angularController = {
     2,
     10,
@@ -57,7 +57,7 @@ lemlib::ChassisController_t angularController = {
     100,
     7,
     500,
-    5};
+    10};
 
 lemlib::Chassis chassis(drivetrain, lateralController, angularController, sensors);
  
