@@ -55,9 +55,9 @@ void sixBAll()
     setIntake(0);
     //chassis.moveTo(15,0,120,1500);
     //pros ::delay(2000);
-    chassis.turnTo(3,-12,1000);
+    chassis.turnTo(3,-14,1000);
     setIntake(-127);
-    chassis.moveTo(3,-12,190,2000);
+    chassis.moveTo(3,-14,190,1500);
     //pros::delay(200);
     chassis.turnTo(53,5,1000);
     setIntake(127);
