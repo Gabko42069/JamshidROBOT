@@ -64,8 +64,9 @@ void competition_initialize() {}
  * from where it left off.
  */
 void autonomous() {
-	//setDriveBrake(pros::E_MOTOR_BRAKE_COAST);
-	if(selector::auton == 2){ autonskills();}
+	//setDriveBrake(pros::E_MOTOR_BRAKE_HOLD);
+	if(selector::auton == 3){ autonskills();}
+	if(selector::auton== 2){ tester();}
 	if(selector::auton == 1){ sixBAll();}
 }
 

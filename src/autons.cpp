@@ -2,14 +2,15 @@
 #include "lemlib/asset.hpp"
 #include "autons.hpp"
 #include "main.h"
+#include "pros/motors.h"
 
 ASSET(right8_txt); // drives from under the bar to ram into the goal
-ASSET(swingy2_txt);
+ASSET(swingy10_txt);
 ASSET(skills0_txt);
 ASSET(clone3_txt);
-ASSET(clone4_txt);
+ASSET(swing1_txt);
 ASSET(clone5_txt);
-ASSET(clone7_txt);
+ASSET(final_txt);
 int catashots = 0;
 
 void sixBAll()
@@ -26,16 +27,48 @@ void sixBAll()
     chassis.moveTo(12,-58,-90,2000,false);
     pros::delay(200);
     setIntake(0);
-    chassis.follow(clone3_txt, 1500,10,true,false);
+    chassis.follow(clone3_txt, 1400,10,true,false);
     pros::delay(1000);
     changeMode(leftWing);
     pros::delay(400);
     changeMode(leftWing);
     pros::delay(400);
-    chassis.turnTo(60, -26, 1000, false, true);
-    chassis.moveTo(67,-26,180,3000,false,false);
+    chassis.turnTo(61, -26, 1000, false, true);
+    chassis.moveTo(64,-26,180,1200,false,false);
     pros::delay(1000);
-   // chassis.follow(clone7_txt, 1500,10,true,false);
+    chassis.follow(swingy10_txt, 2500,12);
+    chassis.turnTo(50,-5,1000);//make aysnc for time cut
+    setIntake(127);
+    pros::delay(500);
+    setIntake(-127);
+    //setDriveBrake(pros::E_MOTOR_BRAKE_HOLD);
+    chassis.turnTo(9,4,1000);
+    chassis.moveTo(9,4, -45, 1500,true);
+    pros ::delay(600);
+    changeMode(rightWing);
+    pros::delay(600);
+    changeMode(rightWing);
+    pros::delay(800);
+    chassis.turnTo(53,0,1000);
+    setIntake(127);
+    pros::delay(1000);
+    setIntake(0);
+    //chassis.moveTo(15,0,120,1500);
+    //pros ::delay(2000);
+    chassis.turnTo(5,-12,1000);
+    setIntake(-127);
+    chassis.moveTo(3,-12,190,2000);
+    pros::delay(500);
+    chassis.turnTo(53,5,1000);
+    setIntake(127);
+    pros ::delay(800);
+    chassis.turnTo(53,5,1000,false,true);
+    ledouble();
+    chassis.follow(final_txt, 3000,12,false,false);
+
+    
+
+    //chassis.moveTo(6,-6,45,1000);
     /*chassis.turnTo(59,-40,1000,false,true);
     chassis.moveTo(59,-40,0,1000,false,false);
     chassis.turnTo(60, -10,1500,false, true);
@@ -127,7 +160,11 @@ void autonskills()
 }
 
 
-
+void tester()
+{
+  chassis.setPose(0,0,0);
+  chassis.turnTo(5, 5, 5000);
+}
 
 /*
 

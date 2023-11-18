@@ -30,7 +30,7 @@ pros::MotorGroup right_side_motors({rightFront,rightMiddle, rightBack});
 lemlib::Drivetrain_t drivetrain = {
     &left_side_motors,
     &right_side_motors,
-    12,
+    13,
     4,
     300,
     8
@@ -43,16 +43,16 @@ lemlib::OdomSensors_t sensors = {
     nullptr,
     &inertial};
 lemlib::ChassisController_t lateralController = {
-    40.5, // kP
-    38, // kD
+    15, // kP
+    30, // kD
     1, // smallErrorRange
     100, // smallErrorTimeout
     3, // largeErrorRange
     500, // largeErßrorTimeout
     5 };// slew rate
 lemlib::ChassisController_t angularController = {
-    3.9,
-    36,
+    2,
+    10,
     3,
     100,
     7,
