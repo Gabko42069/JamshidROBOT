@@ -18,7 +18,7 @@ void sixBAll()
     chassis.setPose(30,-58,-90);
     rightWing.set_value(!rightWing.get_value());
     cataBysnc();
-    pros :: delay(50);
+    //pros :: delay(25);
     rightWing.set_value(!rightWing.get_value());
     pros::delay(350);
     setIntake(-127);
@@ -27,44 +27,44 @@ void sixBAll()
     chassis.moveTo(12,-58,-90,2000,false);
     pros::delay(200);
     setIntake(0);
-    chassis.follow(clone3_txt, 1400,10,true,false);
+    chassis.follow(clone3_txt, 1400,11,true,false);
     pros::delay(1000);
     changeMode(leftWing);
     pros::delay(400);
     changeMode(leftWing);
-    pros::delay(200);
+    //pros::delay(200);
     chassis.turnTo(61, -26, 1000, false, true);
     chassis.moveTo(64,-26,180,1200,false,false);
     pros::delay(200);
     chassis.follow(swingy10_txt, 2500,12);
     chassis.turnTo(50,-5,1000);//make aysnc for time cut
     setIntake(127);
-    pros::delay(300);
+    pros::delay(400);
     setIntake(-127);
     //setDriveBrake(pros::E_MOTOR_BRAKE_HOLD);
     chassis.turnTo(9,4,1000);
-    chassis.moveTo(9,4, -45, 1500,true);
+    chassis.moveTo(9,4, -45, 1300,true);
     pros ::delay(600);
     changeMode(rightWing);
     pros::delay(600);
     changeMode(rightWing);
-    pros::delay(300);
+    pros::delay(100);
     chassis.turnTo(53,0,1000);
     setIntake(127);
     pros::delay(500);
     setIntake(0);
     //chassis.moveTo(15,0,120,1500);
     //pros ::delay(2000);
-    chassis.turnTo(5,-12,1000);
+    chassis.turnTo(3,-12,1000);
     setIntake(-127);
     chassis.moveTo(3,-12,190,2000);
-    pros::delay(200);
+    //pros::delay(200);
     chassis.turnTo(53,5,1000);
     setIntake(127);
     pros ::delay(500);
     chassis.turnTo(53,5,1000,false,true);
     ledouble();
-    chassis.follow(final_txt, 3000,12,false,false);
+    chassis.follow(final_txt, 3000,13,false,false);
 
     
 
