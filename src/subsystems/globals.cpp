@@ -51,8 +51,8 @@ lemlib::ChassisController_t lateralController = {
     500, // largeErßrorTimeout
     10 };// slew rate
 lemlib::ChassisController_t angularController = {
-    2,
-    10,
+    3.6,
+    25,
     3,
     100,
     7,
